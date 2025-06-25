@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
@@ -120,4 +119,166 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #e8e2d4;
+}
+
+/* Responsive container for main content */
+.responsive-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .responsive-container {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+/* Button group for perfect alignment */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* General button improvements for responsiveness */
+.button,
+button,
+[class*="btn"],
+[class*="Button"] {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover,
+button:hover,
+[class*="btn"]:hover,
+[class*="Button"]:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* UI/UX Improvements */
+
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --radius: 0.5rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+  --container-max-width: 1200px;
+  --z-modal: 1000;
+  --z-dropdown: 900;
+}
+
+/* Consistent container */
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* Card style */
+.card {
+  background: var(--card, #fff);
+  border-radius: var(--radius);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Responsive images */
+img, .responsive-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive typography */
+h1, .h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2, .h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+h3, .h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+
+/* Focus state for accessibility */
+button:focus, a:focus, input:focus, select:focus {
+  outline: 2px solid var(--primary, #222);
+  outline-offset: 2px;
+}
+
+/* Disabled button style */
+button:disabled, .button:disabled {
+  background: #ccc;
+  color: #888;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Link hover/active states */
+a {
+  color: var(--primary, #007bff);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, a:active {
+  color: var(--primary-foreground, #0056b3);
+}
+
+/* Section separation */
+section {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Avatar fallback */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #888;
+}
+
+/* Skip to content link for accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: var(--z-modal);
+  background: #fff;
+  color: #222;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius);
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  outline: 2px solid var(--primary, #222);
 }
