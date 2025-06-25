@@ -121,11 +121,11 @@ const ProjectForm = () => {
             'X-Api-Key': '2iROTmD_6t3%UEDV_sQzcAwQqBTYGaiIhZrJXWm$3#l5dNIsVHt!eGuI@I7eq!O',
           },
           body: JSON.stringify({
-            name: formData.name,
-            projectName: formData.projectName,
-            repositoryLink: formData.repositoryLink,
-            hostedLink: formData.hostedLink,
-            feedback: formData.feedback,
+            "Name": formData.name,
+            "Project Name": formData.projectName,
+            "Repository Link": formData.repositoryLink,
+            "Hosted Link": formData.hostedLink,
+            "Feedback": formData.feedback,
           }),
         });
 
