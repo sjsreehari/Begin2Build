@@ -107,11 +107,18 @@ const ProjectForm = () => {
       });
 
       if (response.ok) {
-        // Send data to Google Sheets via Apps Script
-        await fetch('https://script.google.com/macros/s/AKfycbybQS_JKolMbY8xpQBsga1jNGdPFzHOgYZuyw41wgXadWJ2u0VYtmn0RWBf9Jo91BLA/exec', {
+        setIsSubmitted(true);
+        toast({
+          title: "Success!",
+          description: "✅ Thank you for submitting your project!",
+        });
+
+        // Send data to Sheet.best Google Sheets API
+        await fetch('https://api.sheetbest.com/sheets/b655e981-9d97-42b2-8207-ad253a134622', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'X-Api-Key': '2iROTmD_6t3%UEDV_sQzcAwQqBTYGaiIhZrJXWm$3#l5dNIsVHt!eGuI@I7eq!O',
           },
           body: JSON.stringify({
             name: formData.name,
@@ -120,11 +127,6 @@ const ProjectForm = () => {
             hostedLink: formData.hostedLink,
             feedback: formData.feedback,
           }),
-        });
-        setIsSubmitted(true);
-        toast({
-          title: "Success!",
-          description: "✅ Thank you for submitting your project!",
         });
 
         setFormData({
