@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -11,26 +10,24 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300">
             <img 
               src="/lovable-uploads/f5b460f3-d124-41b5-879e-66d13b173a25.png" 
-              alt="Begin2Build Logo" 
+              alt="B2B Logo" 
               className="h-10 w-auto"
             />
-            <span className="text-xl font-semibold text-cream">Begin2Build</span>
+            <button type="button" className="text-xl font-semibold text-cream nav-link p-2" style={{background: 'none', border: 'none', cursor: 'pointer'}}>
+              B2B
+            </button>
           </Link>
           
           <div className="flex space-x-6">
             <Link 
               to="/" 
-              className={`text-cream hover:text-cream-dark transition-colors duration-300 ${
-                location.pathname === '/' ? 'border-b-2 border-cream' : ''
-              }`}
+              className={`nav-link${location.pathname === '/' ? ' nav-link-active' : ''}`}
             >
               Home
             </Link>
             <Link 
               to="/submit" 
-              className={`text-cream hover:text-cream-dark transition-colors duration-300 ${
-                location.pathname === '/submit' ? 'border-b-2 border-cream' : ''
-              }`}
+              className={`nav-link${location.pathname === '/submit' ? ' nav-link-active' : ''}`}
             >
               Submit Project
             </Link>
