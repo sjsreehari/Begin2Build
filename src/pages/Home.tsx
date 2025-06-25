@@ -39,10 +39,8 @@ const Home = () => {
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Link to="/submit">
-              <Button 
-                className="bg-cream text-charcoal hover:bg-cream-dark transition-all duration-300 font-semibold px-8 py-3 text-lg hover:scale-105"
-              >
-                Submit Your Project
+              <Button className="bg-cream text-charcoal hover:bg-cream-dark transition-all duration-300 font-semibold px-8 py-3 text-lg hover:scale-105 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto block text-center flex items-center justify-center">
+                <span className="w-full text-center block">Submit Project</span>
               </Button>
             </Link>
           </div>
@@ -143,8 +141,8 @@ const Home = () => {
               Choose a project that excites you, start coding, and share your amazing work with our community!
             </p>
             <Link to="/submit">
-              <Button className="bg-cream text-charcoal hover:bg-cream-dark transition-all duration-300 font-semibold px-8 py-3 text-lg hover:scale-105">
-                Submit Your Project →
+              <Button className="bg-cream text-charcoal hover:bg-cream-dark transition-all duration-300 font-semibold px-8 py-3 text-lg hover:scale-105 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto block text-center flex items-center justify-center">
+                <span className="w-full text-center block">Submit Project</span>
               </Button>
             </Link>
           </div>
