@@ -107,6 +107,20 @@ const ProjectForm = () => {
       });
 
       if (response.ok) {
+        // Send data to Google Sheets via Apps Script
+        await fetch('https://script.google.com/macros/s/AKfycbwXu2P3mWhD_YUMjwO9bDGgvB46xPQsF8_eEdb2XoB-fp9dGOZgiTmibYP5EDTvEgDA/exec', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            projectName: formData.projectName,
+            repositoryLink: formData.repositoryLink,
+            hostedLink: formData.hostedLink,
+            feedback: formData.feedback,
+          }),
+        });
         setIsSubmitted(true);
         toast({
           title: "Success!",
