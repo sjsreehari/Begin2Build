@@ -108,7 +108,7 @@ const ProjectForm = () => {
 
       if (response.ok) {
         // Send data to Google Sheets via Apps Script
-        await fetch('https://script.google.com/macros/s/AKfycbwXu2P3mWhD_YUMjwO9bDGgvB46xPQsF8_eEdb2XoB-fp9dGOZgiTmibYP5EDTvEgDA/exec', {
+        await fetch('https://script.google.com/macros/s/AKfycbybQS_JKolMbY8xpQBsga1jNGdPFzHOgYZuyw41wgXadWJ2u0VYtmn0RWBf9Jo91BLA/exec', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
