@@ -77,7 +77,7 @@ Participants provided positive feedback, consistently commending the clear, step
 A professionally designed and eye-catching event poster, prominently featuring the compelling tagline "Start Your Web Dev Journey," was widely distributed to effectively promote registration. Access to registration details was conveniently provided via a QR code and the short link: http://bit.ly/Begin2Build.
 
 ## YOUTUBE PLAYLIST
-For ongoing learning and review, all session recordings are readily available and meticulously organized on the dedicated YouTube playlist: [Begin2Build Playlist](https://www.youtube.com/playlist?list=PLFMEQIRBe2RBBW2dglaxamh_BaCwc-kEZ). This resource ensures that participants can revisit complex topics and catch up on any missed sessions at their convenience.
+For ongoing learning and review, all session recordings are readily available and meticulously organized on the dedicated YouTube playlist: [Begin2Build Playlist](https://youtube.com/playlist?list=PLFMEOIRBe2RB8W2dglaxamh_BaCwc-kEZ&si=9vgPocm36EOs09Am). This resource ensures that participants can revisit complex topics and catch up on any missed sessions at their convenience.
 
 ## MEMORABLE MOMENTS
 - A significant highlight and truly memorable moment was witnessing the participants' journey from their initial VS Code setup to confidently completing intricate mini-projects. This progression was marked by immense technical learning, a vibrant collaborative spirit, and a growing sense of accomplishment.
